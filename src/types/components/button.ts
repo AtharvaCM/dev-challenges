@@ -6,4 +6,19 @@ export type ButtonPropType = {
   disableShadow?: boolean;
   disabled?: boolean;
   size?: "sm" | "md" | "lg";
+  color?: "default" | "primary" | "secondary" | "danger";
+};
+
+export type ColorsType = {
+  default: string;
+  primary: string;
+  secondary: string;
+  danger: string;
+};
+
+export type ColorsHocusType = {
+  default: string;
+  primary: string;
+  secondary: string;
+  danger: string;
 };

@@ -1,7 +1,11 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 
-import { ButtonPropType } from "../../../types/components/button";
+import {
+  ButtonPropType,
+  ColorsHocusType,
+  ColorsType,
+} from "../../../types/components/button";
 
 const Button: React.FC<ButtonPropType> = ({
   children,
@@ -9,19 +13,51 @@ const Button: React.FC<ButtonPropType> = ({
   disableShadow = false,
   disabled = false,
   size = "md",
+  color = "default",
 }) => {
   console.log("disabled: ", disabled);
   console.log("variant: ", variant);
 
+  // Colors
+  const colors: ColorsType = {
+    default: "#E0E0E0",
+    primary: "#2962FF",
+    secondary: "#455A64",
+    danger: "#D32F2F",
+  };
+  const colorsOutline: ColorsType = {
+    default: "#AEAEAE",
+    primary: "#3D5AFE",
+    secondary: "#1C313A",
+    danger: "#9A0007",
+  };
+  const colorsOutlineBg: ColorsType = {
+    default: "#E0E0E0",
+    primary: "#2962FF1A",
+    secondary: "#9fb3bd",
+    danger: "#cb9494",
+  };
+  const colorsHocus: ColorsHocusType = {
+    default: "#AEAEAE",
+    primary: "#0039CB",
+    secondary: "#1C313A",
+    danger: "#9A0007",
+  };
   // Variants
-  const def = `bg-[#E0E0E0] rounded-md py-2 px-4 transition disabled:text-[#9E9E9E] ${
-    disabled ? "" : "hocus:bg-[#AEAEAE]"
+  const def = `rounded-md bg-[${
+    colors[color]
+  }] transition disabled:text-[#9E9E9E] ${
+    disabled ? "" : `hocus:bg-[${colorsHocus[color]}]`
   }`;
-  const outline = `rounded-md border border-[#3D5AFE] bg-white py-2 px-4 text-[#3D5AFE] transition ${
-    disabled ? "" : "hocus:bg-[#2962FF1A]/10"
+  const outline = `rounded-md border border-[${
+    colorsOutline[color]
+  }] bg-white text-[${colorsOutline[color]}] transition ${
+    disabled ? "" : `hocus:bg-[${colorsOutlineBg[color]}]/10`
   }`;
-  const text = `rounded-md bg-white py-2 px-4 text-[#3D5AFE] transition disabled:text-[#9E9E9E] ${
-    disabled ? "" : "hocus:bg-[#2962FF1A]/10"
+  const text = `rounded-md bg-white text-[${
+    colorsOutline[color]
+  }] transition disabled:text-[#9E9E9E] ${
+    disabled ? "" : `hocus:bg-[${colorsOutlineBg[color]}]/10`
   }`;
   // Shadow
   const shadow = "shadow-[0_2px_3px_rgba(51,51,51,0.2)]";
@@ -43,18 +79,6 @@ const Button: React.FC<ButtonPropType> = ({
         disabled={disabled}
         onClick={() => console.log("clicked")}
       >
-        {children}
-      </button>
-      <button
-        disabled
-        className="rounded-md bg-[#E0E0E0] py-2 px-4 shadow-[0_2px_3px_rgba(51,51,51,0.2)] transition disabled:text-[#9E9E9E] hocus:bg-[#AEAEAE]"
-      >
-        {children}
-      </button>
-      <button className="rounded-md border border-[#3D5AFE] bg-white py-2 px-4 text-[#3D5AFE] transition hocus:bg-[#2962FF1A]/10">
-        {children}
-      </button>
-      <button className="rounded-md bg-white py-2 px-4 text-[#3D5AFE] transition disabled:text-[#9E9E9E] hocus:bg-[#2962FF1A]/10">
         {children}
       </button>
     </>
