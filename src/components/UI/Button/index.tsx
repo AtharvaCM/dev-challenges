@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 
 import { ButtonPropType } from "../../../types/components/button";
@@ -12,6 +13,7 @@ const Button: React.FC<ButtonPropType> = ({
   console.log("disabled: ", disabled);
   console.log("variant: ", variant);
 
+  // Variants
   const def = `bg-[#E0E0E0] rounded-md py-2 px-4 transition disabled:text-[#9E9E9E] ${
     disabled ? "" : "hocus:bg-[#AEAEAE]"
   }`;
@@ -21,11 +23,18 @@ const Button: React.FC<ButtonPropType> = ({
   const text = `rounded-md bg-white py-2 px-4 text-[#3D5AFE] transition disabled:text-[#9E9E9E] ${
     disabled ? "" : "hocus:bg-[#2962FF1A]/10"
   }`;
+  // Shadow
   const shadow = "shadow-[0_2px_3px_rgba(51,51,51,0.2)]";
+  // Sizes
+  const sm = "py-1.5 px-3";
+  const md = "py-2 px-4";
+  const lg = "py-2.5 px-5";
 
   const btnClass = `${
     variant === "text" ? text : variant === "outline" ? outline : def
-  } ${disableShadow || variant !== "default" ? "" : shadow}`;
+  } ${disableShadow || variant !== "default" ? "" : shadow} ${
+    size === "sm" ? sm : size === "lg" ? lg : md
+  }`;
 
   return (
     <>

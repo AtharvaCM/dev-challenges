@@ -5,9 +5,7 @@ import Button from "./components/UI/Button";
 const App: React.FC = () => {
   return (
     <div className="container p-10">
-      <Button variant="text" disabled>
-        Click Me
-      </Button>
+      <Button>Click Me</Button>
     </div>
   );
 };
