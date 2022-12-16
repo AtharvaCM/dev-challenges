@@ -1,4 +1,4 @@
-const plugin = require('tailwindcss/plugin')
+const plugin = require("tailwindcss/plugin");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -10,5 +10,16 @@ module.exports = {
     plugin(function ({ addVariant }) {
       addVariant("hocus", ["&:hover", "&:focus"]);
     }),
+  ],
+  safelist: [
+    {
+      pattern: /bg-+/,
+    },
+    {
+      pattern: /border-+/,
+    },
+    {
+      pattern: /text-+/,
+    },
   ],
 };
