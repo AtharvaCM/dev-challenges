@@ -7,18 +7,5 @@ export type ButtonPropType = {
   disabled?: boolean;
   size?: "sm" | "md" | "lg";
   color?: "default" | "primary" | "secondary" | "danger";
-};
-
-export type ColorsType = {
-  default: string;
-  primary: string;
-  secondary: string;
-  danger: string;
-};
-
-export type ColorsHocusType = {
-  default: string;
-  primary: string;
-  secondary: string;
-  danger: string;
+  className?: string;
 };
