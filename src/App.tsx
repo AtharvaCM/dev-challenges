@@ -207,7 +207,9 @@ const App: React.FC = () => {
               <p className="mb-3 text-sm text-[#333333]">
                 &lt;Button endIcon="info" /&gt;
               </p>
-              <Button endIcon="info">Click Me</Button>
+              <Button name="myBtn" endIcon="info">
+                Click Me
+              </Button>
             </td>
           </tr>
         </table>

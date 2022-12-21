@@ -5,19 +5,27 @@ import styles from "./Button.module.css";
 
 import { ButtonPropType } from "../../../types/components/button";
 
-const Button: React.FC<ButtonPropType> = ({
-  children,
-  variant = "default",
-  disableShadow = false,
-  disabled = false,
-  size = "md",
-  color = "default",
-  className,
-  startIcon,
-  endIcon,
-}) => {
-  console.log("disabled: ", disabled);
+const Button: React.FC<
+  React.DetailedHTMLProps<
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement
+  > &
+    ButtonPropType
+> = (props) => {
+  const {
+    children,
+    variant = "default",
+    disableShadow = false,
+    disabled = false,
+    size = "md",
+    color = "default",
+    className,
+    startIcon,
+    endIcon,
+  } = props;
   console.log("variant: ", variant);
+  console.log("disabled: ", disabled);
+  console.log("props: ", { ...props });
 
   const hocus = (variant: string, color: string) => {
     let selectedClass: string = "";
@@ -116,18 +124,30 @@ const Button: React.FC<ButtonPropType> = ({
     disableShadow || variant !== "default" ? "" : styles["btn-shadow"]
   } ${hocus(variant, color)}`;
 
-  return (
-    <>
-      <button
-        className={`${btnClass} ${className} flex items-center gap-2`}
-        disabled={disabled}
-        onClick={() => console.log("clicked")}
-      >
-        {startIcon && <span className="material-icons">{startIcon}</span>}
-        {children}
-        {endIcon && <span className="material-icons">{endIcon}</span>}
-      </button>
-    </>
+  // return (
+  //   <>
+  //     <button
+  //       className={`${btnClass} ${className} flex items-center gap-2`}
+  //       disabled={disabled}
+  //       onClick={() => console.log("clicked")}
+  //     >
+  //       {startIcon && <span className="material-icons">{startIcon}</span>}
+  //       {children}
+  //       {endIcon && <span className="material-icons">{endIcon}</span>}
+  //     </button>
+  //   </>
+  // );
+  return React.createElement(
+    "button",
+    {
+      ...props,
+      className: `${btnClass} ${className} flex items-center gap-2`,
+      disabled: disabled,
+      onClick: () => console.log("clicked"),
+    },
+    startIcon && <span className="material-icons">{startIcon}</span>,
+    children,
+    endIcon && <span className="material-icons">{endIcon}</span>
   );
 };
 
