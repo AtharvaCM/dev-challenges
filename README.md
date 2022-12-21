@@ -1,6 +1,6 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">{Your project name}</h1>
+<h1 align="center">{AtharvaCM | Button Challenge}</h1>
 
 <div align="center">
    Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
@@ -8,11 +8,11 @@
 
 <div align="center">
   <h3>
-    <a href="https://{your-demo-link.your-domain}">
+    <a href="https://devchallenges-button-atharvacm.netlify.app/">
       Demo
     </a>
     <span> | </span>
-    <a href="https://{your-url-to-the-solution}">
+    <a href="https://github.com/AtharvaCM/dev-challenges-button-component">
       Solution
     </a>
     <span> | </span>
@@ -20,6 +20,12 @@
       Challenge
     </a>
   </h3>
+</div>
+
+<div align="center">
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c13673d3-1e46-4371-b1f2-bf412ae19d8f/deploy-status)](https://app.netlify.com/sites/devchallenges-button-atharvacm/deploys)
+
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -37,28 +43,24 @@
 
 ## Overview
 
-![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
+![screenshot](https://github.com/AtharvaCM/dev-challenges-button-component/blob/main/src/assets/button-challenge-ss.png?raw=true)
 
-Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
-
-- Where can I see your demo?
-- What was your experience?
-- What have you learned/improved?
-- Your wisdom? :)
+You can check out the demo here - [button-challenge-demo](https://devchallenges-button-atharvacm.netlify.app/)  
+This was a good experience overall, I got to know how a reusable & customizable component is made in React and what are the challenges and caveats it presents. It also improved my basic understanding of the DOM and how Tailwind CSS applies the styles that we write in classes.
 
 ### Built With
 
 <!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
 
 - [React](https://reactjs.org/)
-- [Vue.js](https://vuejs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind](https://tailwindcss.com/)
 
 ## Features
 
 <!-- List the features of your application or follow the template. Don't share the figma file here :) -->
 
-This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/ohgVTyJCbm5OZyTB2gNY) was to build an application to complete the given user stories.
+This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/ohgVTyJCbm5OZyTB2gNY) was to build a customizable button component which statisfies the given user stories.
 
 ## How To Use
 
@@ -68,7 +70,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com) and [N
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/your-user-name/your-project-name
+$ git clone https://github.com/AtharvaCM/dev-challenges-button-component.git
 
 # Install dependencies
 $ npm install
@@ -87,6 +89,6 @@ $ npm start
 
 ## Contact
 
-- Website [your-website.com](https://{your-web-site-link})
-- GitHub [@your-username](https://{github.com/your-usermame})
-- Twitter [@your-twitter](https://{twitter.com/your-username})
+- Website [atharvacm.netlify.app](https://atharvacm.netlify.app/)
+- GitHub [@AtharvaCM](https://github.com/AtharvaCM)
+- Twitter [@Atharva_CM](https://twitter.com/Atharva_CM)
