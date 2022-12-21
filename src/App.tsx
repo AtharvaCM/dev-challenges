@@ -182,6 +182,34 @@ const App: React.FC = () => {
               </Button>
             </td>
           </tr>
+
+          {/* Row 9 */}
+          <tr>
+            <td>
+              <p className="mb-3 text-sm text-[#333333]">
+                &lt;Button startIcon="local_grocery_store" /&gt;
+              </p>
+              <Button startIcon={"local_grocery_store"}>Click Me</Button>
+            </td>
+            <td>
+              <p className="mb-3 text-sm text-[#333333]">
+                &lt;Button startIcon="mail_outline" /&gt;
+              </p>
+              <Button startIcon="mail_outline">Click Me</Button>
+            </td>
+            <td>
+              <p className="mb-3 text-sm text-[#333333]">
+                &lt;Button endIcon="local_hotel" /&gt;
+              </p>
+              <Button endIcon="local_hotel">Click Me</Button>
+            </td>
+            <td>
+              <p className="mb-3 text-sm text-[#333333]">
+                &lt;Button endIcon="info" /&gt;
+              </p>
+              <Button endIcon="info">Click Me</Button>
+            </td>
+          </tr>
         </table>
       </div>
     </div>

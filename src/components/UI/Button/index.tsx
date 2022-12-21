@@ -13,6 +13,8 @@ const Button: React.FC<ButtonPropType> = ({
   size = "md",
   color = "default",
   className,
+  startIcon,
+  endIcon,
 }) => {
   console.log("disabled: ", disabled);
   console.log("variant: ", variant);
@@ -117,11 +119,13 @@ const Button: React.FC<ButtonPropType> = ({
   return (
     <>
       <button
-        className={`${btnClass} ${className}`}
+        className={`${btnClass} ${className} flex items-center gap-2`}
         disabled={disabled}
         onClick={() => console.log("clicked")}
       >
+        {startIcon && <span className="material-icons">{startIcon}</span>}
         {children}
+        {endIcon && <span className="material-icons">{endIcon}</span>}
       </button>
     </>
   );
